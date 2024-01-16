@@ -5,12 +5,30 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@kinde-oss/kinde-auth-nextjs':
+    specifier: ^2.1.2
+    version: 2.1.2(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.48)(react@18.2.0)
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.4.1)
+  '@tanstack/react-query':
+    specifier: ^5.17.14
+    version: 5.17.14(react@18.2.0)
+  '@trpc/client':
+    specifier: 11.0.0-next-beta.193
+    version: 11.0.0-next-beta.193
+  '@trpc/next':
+    specifier: 11.0.0-next-beta.193
+    version: 11.0.0-next-beta.193(@tanstack/react-query@5.17.14)(@trpc/client@11.0.0-next-beta.193)(@trpc/react-query@11.0.0-next-beta.193)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)
+  '@trpc/react-query':
+    specifier: 11.0.0-next-beta.193
+    version: 11.0.0-next-beta.193(@tanstack/react-query@5.17.14)(@trpc/client@11.0.0-next-beta.193)(react-dom@18.2.0)(react@18.2.0)
+  '@trpc/server':
+    specifier: 11.0.0-next-beta.193
+    version: 11.0.0-next-beta.193
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -35,6 +53,9 @@ dependencies:
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.1)
+  zod:
+    specifier: ^3.22.4
+    version: 3.22.4
 
 devDependencies:
   '@types/node':
@@ -174,6 +195,30 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /@kinde-oss/kinde-auth-nextjs@2.1.2(next@14.0.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-HpGYR8alpX7fxbIysWdRekumuMaDg2ZyQjULAsMY29kmlrQhBdRLbPFlYT/u/227MZu0P5AoEEdBdYLClR8FKg==}
+    peerDependencies:
+      next: ^12.2.5 || ^13 || ^14
+      react: ^18.1.0
+      react-dom: ^18.1.0
+    dependencies:
+      '@kinde-oss/kinde-typescript-sdk': 2.6.0
+      cookie: 0.5.0
+      crypto-js: 4.2.0
+      jwt-decode: 3.1.2
+      next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      uncrypto: 0.1.3
+    dev: false
+
+  /@kinde-oss/kinde-typescript-sdk@2.6.0:
+    resolution: {integrity: sha512-AbAlTu+a3yNgsuu2J8hTJSRjeF3+a6oJtsg56AzP7F5f7WyKACKBTn1hSH5KtnSOcG68KuCpx+PqAWrBqdQOcw==}
+    dependencies:
+      jwt-decode: 4.0.0
+      uncrypto: 0.1.3
+    dev: false
 
   /@next/env@14.0.4:
     resolution: {integrity: sha512-irQnbMLbUNQpP1wcE5NstJtbuA/69kRfzBrpAD7Gsn8zm/CY6YQYc3HQBz8QPxwISG26tIm5afvvVbu508oBeQ==}
@@ -339,6 +384,69 @@ packages:
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
       tailwindcss: 3.4.1
+    dev: false
+
+  /@tanstack/query-core@5.17.14:
+    resolution: {integrity: sha512-k56eLuGfO8Rih0SqFJKq+XGrk3rmyiGBcNmbL+P+IiaRBeQtymkCgh5A2+v63SDGKzjaiBUSlbTLQcMCD6boQw==}
+    dev: false
+
+  /@tanstack/react-query@5.17.14(react@18.2.0):
+    resolution: {integrity: sha512-yFGs/KIB2ionNrjkL2EZSL4kyFcijGOQUheQU3TxCv58GY3JoNMrmvfT6T3J75seRUE1EscxJT+h7WDr4AITJw==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      '@tanstack/query-core': 5.17.14
+      react: 18.2.0
+    dev: false
+
+  /@trpc/client@11.0.0-next-beta.193:
+    resolution: {integrity: sha512-s+SSMrAPxbGoIZ4CianOYWJ7RbgECkTP9Dihi194IdiLrxM8+ijckKVYcXrPjTOfszGFcm6QaHQfk7hIHtgckg==}
+    dependencies:
+      '@trpc/core': 11.0.0-next-beta.193
+    dev: false
+
+  /@trpc/core@11.0.0-next-beta.193:
+    resolution: {integrity: sha512-oF/Tg6ue12v8EjtbLEjiuLddbFovdpwK1hGPgZUesX1gtRiuWoJugpo4Xn2L1ESFhn1MVCZdAgXLj3qoNpXxIg==}
+    dev: false
+
+  /@trpc/next@11.0.0-next-beta.193(@tanstack/react-query@5.17.14)(@trpc/client@11.0.0-next-beta.193)(@trpc/react-query@11.0.0-next-beta.193)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ttbv4TPptMhJLqOwZNRymB8RMD4dsdyh4xZARCKG/8yF/XewP30hgWdHKl/zRzjDRmy6NtWzKycb5yI/99LO2A==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.0.0
+      '@trpc/client': 11.0.0-next-beta.193+ec8719429
+      '@trpc/react-query': 11.0.0-next-beta.193+ec8719429
+      next: '*'
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@tanstack/react-query': 5.17.14(react@18.2.0)
+      '@trpc/client': 11.0.0-next-beta.193
+      '@trpc/core': 11.0.0-next-beta.193
+      '@trpc/react-query': 11.0.0-next-beta.193(@tanstack/react-query@5.17.14)(@trpc/client@11.0.0-next-beta.193)(react-dom@18.2.0)(react@18.2.0)
+      next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@trpc/react-query@11.0.0-next-beta.193(@tanstack/react-query@5.17.14)(@trpc/client@11.0.0-next-beta.193)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-cC9IB8LiViqZeHGUKnmYhi5nwpUd5wC3efidAUyX2jCQdwPiThZQJWcmtXfPmb9qXvERq6E40nu7cHQXlMDzrQ==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.0.0
+      '@trpc/client': 11.0.0-next-beta.193+ec8719429
+      react: '>=18.2.0'
+      react-dom: '>=18.2.0'
+    dependencies:
+      '@tanstack/react-query': 5.17.14(react@18.2.0)
+      '@trpc/client': 11.0.0-next-beta.193
+      '@trpc/core': 11.0.0-next-beta.193
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@trpc/server@11.0.0-next-beta.193:
+    resolution: {integrity: sha512-NRs1IyydAQI2jKZQzotVUwwUtBdvZWZOCxtaLsA5EkqZyXWbSQ2hF0xwbCZvUBnMWJXrXZljWidFzsGGsEGSag==}
+    dependencies:
+      '@trpc/core': 11.0.0-next-beta.193
     dev: false
 
   /@types/json5@0.0.29:
@@ -743,6 +851,11 @@ packages:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
+  /cookie@0.5.0:
+    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
+    engines: {node: '>= 0.6'}
+    dev: false
+
   /cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
@@ -750,6 +863,10 @@ packages:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  /crypto-js@4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
+    dev: false
 
   /cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
@@ -1755,6 +1872,15 @@ packages:
       object.values: 1.1.7
     dev: true
 
+  /jwt-decode@3.1.2:
+    resolution: {integrity: sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==}
+    dev: false
+
+  /jwt-decode@4.0.0:
+    resolution: {integrity: sha512-+KJGIyHgkGuIq3IEBNftfhW/LfWhXUIY6OmyVWjliu5KH1y0fw7VQ8YndE2O4qZdMSd9SqbnC8GOcZEy0Om7sA==}
+    engines: {node: '>=18'}
+    dev: false
+
   /keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
     dependencies:
@@ -2666,6 +2792,10 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
+  /uncrypto@0.1.3:
+    resolution: {integrity: sha512-Ql87qFHB3s/De2ClA9e0gsnS6zXG27SkTiSJwjCc9MebbfapQfuPzumMIUMi38ezPZVNFcHI9sUIepeQfw8J8Q==}
+    dev: false
+
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
@@ -2785,3 +2915,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: false
