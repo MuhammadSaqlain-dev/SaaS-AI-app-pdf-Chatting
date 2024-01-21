@@ -22,6 +22,7 @@ const Navbar = () => {
             >
               Dashboard
             </Link>
+            {/* login and register buttons */}
             <LoginLink
               className={buttonVariants({
                 variant: "ghost",
